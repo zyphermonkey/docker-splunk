@@ -1,4 +1,4 @@
-# v8.1.6
+# v8.2.2.1
 This is a Dockerfile setup for splunk - http://www.splunk.com
 
 
