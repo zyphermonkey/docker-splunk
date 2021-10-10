@@ -41,6 +41,10 @@ RUN wget -O ${SPLUNK_FILENAME} https://d7wz6hmoaavd0.cloudfront.net/products/${S
   && rm /${SPLUNK_FILENAME} \
   && chown -R nobody:users /opt/splunk
 
+### Configure default admin password
+COPY user-seed.conf /opt/splunk/etc/system/local/user-seed.conf
+RUN chown nobody:users /opt/splunk/etc/system/local/user-seed.conf
+
 RUN printf "\nOPTIMISTIC_ABOUT_FILE_LOCKING = 1\n" >> $SPLUNK_HOME/etc/splunk-launch.conf
 
 EXPOSE 8000 8088 8089 9997 514 
