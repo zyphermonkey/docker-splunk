@@ -1,6 +1,6 @@
 ### Dockerfile for splunk
 FROM phusion/baseimage:0.9.16
-MAINTAINER zyphermonkey
+LABEL authors="zyphermonkey"
 
 ENV SPLUNK_PRODUCT splunk
 ENV SPLUNK_VERSION 7.1.2
